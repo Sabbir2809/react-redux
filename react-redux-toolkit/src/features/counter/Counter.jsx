@@ -15,13 +15,27 @@ const Counter = () => {
   };
 
   return (
-    <div>
-      <h2>Counter App</h2>
-      <h1>Count: {count}</h1>
-      <button onClick={handleIncrement}>Increment</button>
-      <button onClick={handleDecrement}>Decrement</button>
-      <button onClick={() => dispatch(reset())}>Reset</button>
-      <button onClick={() => dispatch(incrementByValue(5))}>Increment By Value</button>
+    <div className='container'>
+      <h2 className='text-center'>Counter App</h2>
+      <div className='card p-3'>
+        <div className='card-header'>
+          <h2 className='text-success'>Count: {count}</h2>
+        </div>
+        <div className='card-body'>
+          <button onClick={handleIncrement} className='btn btn-success mx-2'>
+            Increment
+          </button>
+          <button onClick={handleDecrement} className='btn btn-warning mx-2'>
+            Decrement
+          </button>
+          <button onClick={() => dispatch(reset())} className='btn btn-danger mx-2'>
+            Reset
+          </button>
+          <button onClick={() => dispatch(incrementByValue(5))} className='btn btn-secondary mx-2'>
+            Increment By Value
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

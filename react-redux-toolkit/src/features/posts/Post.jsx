@@ -12,18 +12,32 @@ const Post = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Post App</h2>
-      {isLoading && <h1>Loading...</h1>}
-      {error && <h1>{error}</h1>}
+    <div className='container'>
+      <h2 className='text-center mt-3'>Post App</h2>
+      {isLoading && (
+        <div className='spinner-border text-primary' role='status'>
+          <span className='visually-hidden'>Loading...</span>
+        </div>
+      )}
+
+      {error && (
+        <div className='alert alert-danger' role='alert'>
+          {error}
+        </div>
+      )}
+
       <section>
         {posts.map((post) => {
           const { id, title, body } = post;
           return (
-            <article key={id}>
-              <p>Id: {id}</p>
-              <h4>Title: {title}</h4>
-              <p>Body: {body}</p>
+            <article className='card' key={id}>
+              <div className='card-header'>
+                <p>Id: {id}</p>
+                <h4 className='text-success'> {title}</h4>
+              </div>
+              <div className='card-body'>
+                <p className='text-secondary'>{body}</p>
+              </div>
             </article>
           );
         })}
