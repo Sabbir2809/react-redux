@@ -1,0 +1,25 @@
+{
+  "name": "react-redux",
+  "version": "1.0.0",
+  "description": "A small JS Library for managing medium/large amount of states globally in your app. useContext + useReducer Hook ideas will help you to understand redux.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node redux-concept-3.js"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "JavaScript",
+    "ES6",
+    "State",
+    "Action",
+    "Dispatch",
+    "Reducers",
+    "Store"
+  ],
+  "author": "Sabbir Hossain",
+  "license": "ISC",
+  "dependencies": {
+    "redux": "^4.2.1"
+  }
+}
